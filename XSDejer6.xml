@@ -1,0 +1,50 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<xs:schema xmlns:xs="https:://www.w3.org/2001/XMLSchema">
+
+<!-- Se abre primero el elemento cuentos ya que cuenta con los siguientes atributos complejos-->
+<xs:element name="cuentos">
+ <xs:complexType>
+   <xs:sequence>
+    <xs:element name="cuento">
+      <xs:complextype> 
+        <xs:sequence>
+          <xs:element name="cod" type="xs:integer"/>
+          <xs:element name="titulo" type="xs:string"/>
+          <xs:element name="genero" type="xs:string" minOccurs="0"/>
+          <xs:element name="personajes">
+            <!--el elemento genero es un elemento opcional, pero se le pone minOccurs ya que puede aparecer sin restrcciones de veces
+            ya que no tiene un valor, y si se desea añadir siempre se podra tambien con sus valores permitidos por ejemplo infantil -->
+
+              <xs:complextype>
+               <xs:sequence>
+                <xs:element name="personajes" maxOccurs="unbounded">
+                  <!-- en el caso de personajes como es un cuento se tiene que poner las maximas veces de aparicion y esto nos lo 
+                  soluciona unbounded que su valor es ilimitado-->
+
+                <xs:complextype>
+                 <xs:sequence>
+                   <xs:element name="nombre" type="xs:string"/>
+                   <xs:element name="genero" type="xs:string"/>
+                   <xs:element name="id" type="xs:integer"/>
+                 </xs:sequence>
+                 <!--se menten los elementos hijos de personajes, y el atributo opcional que se pide, para su 
+                uso opcional en el xml y este llevara por nombre rol y este abarcara los valores principal, secundario, antagonista
+              de personajes -->
+
+                 <xs:attribute name="rol" type="xs:string" use="optional"/>
+                </xs:complextype>
+                </xs:element>
+                 </xs:sequence>
+               </xs:complextype>
+          </xs:element>
+            <xs:element name="trama" type="xs:string" />
+            <!--Y el ultimo elemento hijo de cuento que es trama es un elemento simple entonces no es necesario añadirle una
+            sequence-->
+
+               </xs:sequence>
+            </xs:complextype>
+          </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

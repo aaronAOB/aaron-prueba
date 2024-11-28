@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Tarta de Manzana</title>
+    <style>
+        div .btn-group .button {
+            width: 100px;
+            height: 100px;
+            transition: width 2s;
+        }
+
+        div .btn-group .button:hover {
+            width: 300px;
+        }
+
+        .btn-group .button {
+            background-color: #04AA6D; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;  
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            cursor: pointer;
+            width: 150px;
+        }
+
+        .btn-group .button:not(:last-child) {
+            border-bottom: none;
+        }
+
+        .btn-group .button:hover { 
+            background-color: #3e8e41;
+        }
+
+        .btn-group .button2 {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            animation-name: example;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes example {
+            from {background-color: aqua;}
+            to {background-color: bisque;}
+        }
+
+        .btn-group .button3 {
+            width: 100px;
+            height: 100px;
+            background: violet;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 15px 32px;
+            display: block;
+            transition: width 2s, height 2s, transform 2s;
+        }
+
+        .btn-group .button3:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(170deg);
+        }
+
+        .btn-group .button4 {
+            width: 100px;
+            height: 100px;
+            background-color: rosybrown; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            display: block;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            animation-name: example;
+            animation-duration: 10s;
+            animation-delay: -2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes example {
+            0%   {background-color: red; left: 0px; top: 0px;}
+            25%  {background-color: yellow; left: 200px; top: 0px;}
+            50%  {background-color: blue; left: 200px; top: 200px;}
+            75%  {background-color: green; left: 0px; top: 200px;}
+            100% {background-color: red; left: 0px; top: 0px;}
+        }
+
+        /* Estilos para la paginación centrada y con bordes redondeados */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .pagination a {
+            color: #333;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .pagination a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        /* Estilos para la noticia en múltiples columnas */
+        .noticia {
+            column-count: 3; /* Crear tres columnas */
+            column-gap: 20px; /* Espacio entre columnas */
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Otros estilos */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header, #footer {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        #main-content {
+            padding: 20px;
+        }
+
+        .recipe-section {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Receta de Tarta de Manzana</h1>
+    </div>
+
+    <div id="main-content" class="recipe-section">
+        <div id="description">
+            <p>Esta deliciosa tarta de manzana es perfecta para cualquier ocasión. Sigue estos pasos para obtener un postre que encantará a todos.</p>
+        </div>
+
+        <div id="ingredients" class="ingredients">
+            <h2>Ingredientes</h2>
+            <ul>
+                <li>3 manzanas grandes</li>
+                <li>200g de harina</li>
+                <li>100g de azúcar</li>
+                <li>2 huevos</li>
+                <li>50g de mantequilla</li>
+                <li>1 cucharadita de canela</li>
+            </ul>
+        </div>
+
+        <div id="instructions" class="instructions">
+            <h2>Instrucciones</h2>
+            <ol>
+                <li>Pelar y cortar las manzanas en rodajas finas.</li>
+                <li>Mezclar la harina, azúcar y canela en un bol grande.</li>
+                <li>Añadir los huevos y la mantequilla derretida, mezclar bien.</li>
+                <li>Colocar las rodajas de manzana en un molde y verter la mezcla encima.</li>
+                <li>Hornear a 180°C durante 40 minutos o hasta que esté dorada.</li>
+            </ol>
+        </div>
+        
+        <div class="noticia">
+            "¡La tarta de manzana fue todo un éxito! Seguí la receta paso a paso, y me encantó lo fácil que fue
+            prepararla. Las manzanas quedaron perfectamente cocidas, y el toque de canela le dio un aroma irresistible.
+            La textura es suave pero con un crujiente en los bordes que hace que cada bocado sea delicioso. Sin duda,
+            esta receta se ha convertido en una de mis favoritas para las reuniones familiares. Todos en casa pidieron
+            una segunda porción."
+        </div>
+        
+        <h2>Vertical Button Group</h2>
+
+        <div class="btn-group">
+            <button class="button">Button</button>
+            <button class="button2">Button2</button>
+            <button class="button3">Button3</button>
+            <button class="button4">Button4</button>
+        </div>
+        
+        <div class="center">
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="footer">
+        <p>Recetas de Cocina &copy; 2024</p>
+    </div>
+
+</body>
+</html>
